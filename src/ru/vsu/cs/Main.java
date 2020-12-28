@@ -8,6 +8,7 @@ public class Main {
         Scanner scn = new Scanner(System.in);
         Random rnd = new Random();
 
+        /*
         MyGraph graph = new MyGraph();
         graph.addAdge(0, 1);
         graph.addAdge(0, 2);
@@ -71,5 +72,21 @@ public class Main {
         System.out.print("\nКол-во сравнений (с.Шелла): " + shellSorting.getCount());
         shellSorting.sort(shellArrWorst);
         System.out.print("\nКол-во сравнений (с.Шелла, худ.): " + shellSorting.getCount() + '\n');
+         */
+
+
+        WGraph k = new WGraph();
+
+
+        Edge e1 = new Edge(1, 2, 12);
+        Edge e2 = new Edge(2, 3, 15);
+        Edge e3 = new Edge(3, 4, 17);
+        Edge e4 = new Edge(4, 1, 26);
+        Edge e5 = new Edge(1, 3, 9);
+        Edge e6 = new Edge(2, 0, 13);
+
+
+        Edge[] edges = {e1, e2, e3, e4, e5, e6};
+        System.out.println("\nМин.вес = " + k.kruskal(edges, 5));
     }
 }
